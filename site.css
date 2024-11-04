@@ -99,6 +99,9 @@ em {
   font-size: 1.5vw;
 }
 #chatblock {
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
   position: absolute;
   top: 50%;
   bottom: 50%;
@@ -134,7 +137,7 @@ em {
   color: #fff;
   font: normal 1.2vw arial;
 }
-.squareblock2:hover{
+#squareblock2:hover{
   opacity: 0.9;
   transition: 2s ease;
 }
