@@ -85,7 +85,7 @@ em {
 #coantainer {
   background-image: url("/images/bg2.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: absolute;
   background-attachment:fixed ;
   /* position: fixed; */
 
@@ -111,6 +111,7 @@ em {
 }
 .images {
   display: flex;
+  float: right;
 }
 .coantiner .images img {
   margin: 0vw 1vw 0vw 1vw;
@@ -192,4 +193,11 @@ em {
   padding: 10px;
   border: 2px solid #fff;
   background-color: transparent
+}
+.companyimage{
+  float: left;
+  display: flex;
+}
+.generatorimage{
+  float: left;
 }
