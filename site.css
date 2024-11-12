@@ -87,8 +87,6 @@ em {
   background-position: center;
   background-size: absolute;
   background-attachment:fixed ;
-  /* position: fixed; */
-
 }
 .chat {
   font: Anton;
@@ -127,9 +125,6 @@ em {
   font: normal 1.2vw arial;
 }
 #squareblock2 {
-  display: none;
-  position: absolute;
-  z-index: 10;
   background-color: rgb(70, 26, 26);
   color: #fff;
   font: normal 1.2vw arial;
@@ -149,8 +144,23 @@ em {
   display: flex;
 }
 #pixlr {
+  background-color: rgb(70, 26, 26);
+  color: #fff;
+  font: normal 1.2vw arial;
 }
+#pixlr:hover{
+  opacity: 0.9;
+  transition: 2s ease;
+}
+
 #dalle {
+  background-color: rgb(70, 26, 26);
+  color: #fff;
+  font: normal 1.2vw arial; 
+}
+#dalle:hover{
+   opacity: 0.9;
+  transition: 2s ease;
 }
 #chatbox {
   font: Lato;
@@ -171,6 +181,10 @@ em {
   background-color: rgb(70, 26, 26);
   color: #fff;
   font: normal 1.2vw arial;
+}
+#amazonchat:hover{
+ opacity: 0.9;
+  transition: 2s ease;
 }
 .generator {
   font: Anton;

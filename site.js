@@ -1,27 +1,38 @@
-const image = document.getElementById("img1");
-const hoverimage = document.getElementById("squareblock");
-image.addEventListener("mouseover", function () {
-  hoverimage.style.display = "block";
+let arrayImage = [
+  { imageId: "img1", hoverId: "squareblock" },
+  { imageId: "img2", hoverId: "squareblock2" },
+  { imageId: "img3", hoverId: "pixlr" },
+  { imageId: "img4", hoverId: "dalle" },
+  { imageId: "ibm", hoverId: "ibmchat" },
+  {imageId:"amazoon", hoverId:"amazonchat"}
+];
+arrayImage.forEach(function (pair) {
+  const image = document.getElementById(pair.imageId);
+  const hoverImage = document.getElementById(pair.hoverId);
+
+  image.addEventListener("mouseover", function () {
+    hoverImage.style.display = "block";
+  });
+
+  image.addEventListener("mouseout", function () {
+    hoverImage.style.display = "none";
+  });
 });
-image.addEventListener("mouseout", function () {
-  hoverimage.style.display = "none";
-});
-const image2 = document.getElementById("img2");
-const hoverimage2 = document.getElementById("squareblock2");
-image2.addEventListener("mouseover", function () {
-  hoverimage2.style.display = "block";
-});
-image2.addEventListener("mouseout", function () {
-  hoverimage2.style.display = "none";
-});
-const image3 = document.getElementById("img3");
-const hoverimage3 = document.getElementById("pixlr");
-image3.addEventListener("mouseover", function () {
-  hoverimage3.style.display = "block";
-});
-image3.addEventListener("mouseout", function () {
-  hoverimage3.style.display = "none";
-});
+
+// let ArrayImage = Array.from(arrayImg);
+// for (let i = 0; i < ArrayImage.length; i++) {
+//   console.log(i);
+//   const image = document.getElementById(ArrayImage[i].imageId);
+//   const hoverImage = document.getElementById(ArrayImage[i].hoverId)
+
+//   image.addEventListener("mouseover",  function () {
+//     hoverImage.style.display="block"
+//     image.addEventListener("mouseout", function () {
+//       hoverImage.style.display="none"
+//     })
+//   })
+//  }
+
 const p = document.getElementsByClassName("disappear");
 
 function elementInViewport(el) {
@@ -46,9 +57,9 @@ window.addEventListener("scroll", (el) => {
   console.log(el);
   for (let i = 0; i < p.length; i++) {
     if (elementInViewport(p[i])) {
-      p[i].style["z-index"][i] = "1";
+      p[i].style.display = "block";
     } else {
-      p[i].style["z-index"] = "-1";
+      p[i].style.display = "none";
     }
   }
 });
